@@ -1,23 +1,5 @@
 <!DOCTYPE html>
 <html>
-<script src="https://cdn.jsdelivr.net/npm/rune-games-sdk@2.5.2/dist/browser.min.js"></script>
-<script>document.title = 0
-
-Rune.init({
-  resumeGame: () => {
-    0
-  },
-  pauseGame: () => {
-    0
-  },
-  restartGame: () => {
-    vm.greenFlag()
-  },
-  getScore: () => {
-    return Number(document.title)
-  },
-})
-</script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -315,24 +297,5 @@ Rune.init({
       });
       })();
     </script>
-  <script>
-    const run = async () => {
-      const projectData = await getProjectData();
-      await scaffolding.loadProject(projectData);
-      setProgress(1);
-      loadingScreen.hidden = true;
-      if (true) {
-        scaffolding.start();
-      } else {
-        launchScreen.hidden = false;
-        launchScreen.addEventListener('click', () => {
-          launchScreen.hidden = true;
-          scaffolding.start();
-        });
-        launchScreen.focus();
-      }
-    };
-    run().catch(handleError);
-  </script>
 </body>
 </html>
